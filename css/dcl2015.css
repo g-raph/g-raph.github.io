@@ -1,0 +1,59 @@
+.slide small {
+  color: rgba(255, 255, 255, 0.4);
+}
+.slide.slide-01 h2,
+.slide.slide-01 h4,
+.slide.slide-01 p,
+.slide.slide-01 small {
+  text-shadow: none;
+  color: #222;
+}
+.slide.slide-01 h2 {
+  margin-top: 80px;
+}
+.slide.slide-02 .info > *,
+.slide.slide-03 .info > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+.slide.slide-02 .info > img,
+.slide.slide-03 .info > img {
+  border-radius: 50%;
+  margin-right: 50px;
+}
+.slide.slide-02 .info > p,
+.slide.slide-03 .info > p {
+  text-align: left;
+}
+.slide.slide-02 .info > p i.fa,
+.slide.slide-03 .info > p i.fa {
+  color: #a23;
+  padding-top: 3px;
+  margin-right: 10px;
+}
+.headerimg {
+  display: none;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 30px 0 0;
+  position: fixed;
+  left: 20px;
+  top: 20px;
+}
+.reveal section img.logo2015 {
+  border: 0;
+  width: 40%;
+  height: auto;
+  background: transparent;
+  margin: 0;
+}
+.reveal section img.leftpart {
+  width: 20%;
+}
+.reveal section img.screenshot {
+  border: 0;
+  background: transparent;
+}
+.summ li span {
+  color: darkorange;
+}
