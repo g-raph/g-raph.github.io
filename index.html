@@ -59,6 +59,7 @@
         <section>
           <h3>Today we'll talk about...</h3>
           <ul class="summ">
+            <li class="fragment">The big picture</li> <!-- Fre -->
             <li class="fragment">What is <span>JSON</span> / <span>REST</span> / <span>CORS</span></li> <!-- Fre -->
             <li class="fragment">How to create a <span>JSON feed</span> in Drupal 7</li> <!-- Gunter -->
             <li class="fragment">How to <span>setup a frontend</span> with angular-seed</li> <!-- Gunter -->
@@ -93,7 +94,7 @@
             <img class="leftpart" src="img/snor.jpg">
             <p>
               Frederik Wouters<br>
-              <small>Consulting Senior Backend Dev<br><br><i class="fa fa-twitter"></i> @drupalsensei<br><i class="fa fa-linkedin"></i> frederik_wouters</small><br>
+              <small>Consulting Senior Backend Dev<br><br><i class="fa fa-twitter"></i> <a href="https://twitter.com/wouters_f">@wouters_f</a><br><i class="fa fa-linkedin"></i> <a href="https://www.linkedin.com/profile/view?id=AAIAAAH-wK4B2-DLZwm9gP88-gkXy7KhBO4iIHw&trk=nav_responsive_tab_profile">Frederik Wouters</a></small><br>
             </p>
           </div>
         </section>
@@ -104,33 +105,298 @@
           <p>I want to learn something!</p>
         </section>
 
-        <!-- gif -->
-        <section data-background="https://media.giphy.com/media/pjyUD8L0u7qhi/giphy.gif">
-          <h2>Let's kick some ass...</h2>
+
+        <!-- big picture 1 -->
+        <section data-background="http://blog.hdwallsource.com/wp-content/uploads/2014/10/earth-wallpaper-hd-23102-23752-hd-wallpapers.jpg">
+          <h2>Drupal in the past</h2>
+          <p><img src="/screenshots/fre_drupal_1.png"></p>
         </section>
+
+        <!-- big picture 2 -->
+        <section data-background="http://blog.hdwallsource.com/wp-content/uploads/2014/10/earth-wallpaper-hd-23102-23752-hd-wallpapers.jpg">
+          <h2>More and more</h2>
+          <p><img src="/screenshots/fre_drupal_2.png"></p>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- JSON -->
+
+
+
+
+
+
+
+
 
 
         <section class="slide slide-gunter">
-          <h3><span style="color:darkorange;">JSON</span> is not<br> a fighting movie star!</h3>
-          <img class="screenshot" src="screenshots/jason.jpg">
+          <h3>JSON</h3>
+          <!-- <img class="screenshot" src="screenshots/jason.jpg"> -->
+          <span style="color:darkorange;">J</span>ava<span style="color:darkorange;">S</span>cript <span style="color:darkorange;">O</span>bject <span style="color:darkorange;">N</span>otation is a lightweight format that is used for data interchanging. It is based on a subset of JavaScript language (the way objects are built in JavaScript). As stated in the MDN, some JavaScript is not JSON, and some JSON is not JavaScript
         </section>
+
         <section data-background="http://www.reactiongifs.com/r/panic.gif">
         </section>
+
         <section class="slide slide-gunter">
-          <h3><span style="color:darkorange;">REST</span> is not<br> what this kitten does in your sofa!</h3>
+          <h3>Example Object</h3>
+            <div  style="text-align:left;">
+            <code>
+
+            {<br>
+              &nbsp;&nbsp;&nbsp;”string": ”value”,<br>
+              &nbsp;&nbsp;&nbsp;”boolean": true,<br>
+              &nbsp;&nbsp;&nbsp;”number": 123.45,<br>
+            }
+
+            </code>
+            </div>
+        </section>
+
+        <section class="slide slide-gunter">
+          <h3>Example Array</h3>
+            <div  style="text-align:left;">
+            <code>
+           [0,1,2] <br>or<br> [{"name": "Fre"}, {"name": "Gunter"}]
+            </pre>
+            </code>
+            </div>
+        </section>
+
+
+        <section class="slide slide-gunter">
+          <h3>Example Combination</h3>
+            <div  style="text-align:left;">
+            <code>
+{<br>
+&nbsp;&nbsp;"users": [<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"firstName": "John", <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"lastName": "Smith", <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"address": {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"streetAddress": "21 2nd Street", <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"city": "New York", <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"state": "NY", <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"postalCode": 10021<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"phoneNumbers": [<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"212 555-1234", <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"646 555-4567"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;]<br>
+}
+            </code>
+            </div>
+        </section>
+
+
+
+        <section data-background="http://www.reactiongifs.com/r/panic.gif">
+          <h3>Is this even about the frontend?</h3>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- REST -->
+
+
+
+
+
+
+
+
+
+        <section class="slide slide-gunter">
+          <h3><span style="color:darkorange;">REST</span></h3>
           <img class="screenshot" src="http://www.reactiongifs.com/wp-content/uploads/2013/11/turkey-coma1.gif">
         </section>
-        <section data-background="http://www.reactiongifs.com/r/panic.gif">
-          <h3>It's getting worse....</h3>
 
-        </section>
         <section class="slide slide-gunter">
-          <h3><span style="color:darkorange;">CORS</span> is not<br> a little boys movie!</h3>
-          <img class="screenshot" src="screenshots/cars.jpg">
+
+          Any information that can be named is a Resource
         </section>
+
+        <section class="slide slide-gunter">
+
+          A resource can also be a collection of entities
+          <br>
+          <br>
+          http://dom.co/api/cities
+        </section>
+
+        <section class="slide slide-gunter">
+
+          Every resource has a unique identifier (URI)<br>
+          <br>
+          http://dom.co/api/cities<br>
+          http://dom.co/api/cities/unique_id<br>
+        </section>
+
+
+        <section class="slide slide-gunter">
+          <br>
+          http://dom.co/api/cities/leuven<br>
+          <br>
+          ><br>
+          <br>
+          http://dom.co/api?typ=cities&name=leuven
+        </section>
+
+        <section class="slide slide-gunter">
+          Every resource has a representation, and may have multiple representations
+          <br><br>yaml, Json, XML, html, pdf, png, ...
+        </section>
+
+        <section class="slide slide-gunter">
+          When to return text/html/JSON/yaml? <br><br>Content negotiation (HTTP: Accept header)<br><br>
+          GET http://dom.co/cities<br>
+          Accept: application/json, text/xml<br>
+        </section>
+
+
+        <section class="slide slide-gunter">
+          DELETE<br>
+          http://domain.com/api/cities/leuven<br>
+          <br>
+          POST<br>
+          http://domain.com/api/cities<br>
+          {newcity}<br>
+          <br>
+          GET<br>
+          http://domain.com/api/cities/leuven<br>
+          <br>
+          PUT<br>
+          http://domain.com/api/cities/leuven<br>
+          {updated}<br>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- CORS -->
+
+
+
+
+
+
+
+
+
+
+
+        <section class="slide slide-gunter">
+          <h3><span style="color:darkorange;">CORS</span></h3>
+          <img class="screenshot" src="http://www.reactiongifs.com/r/dsori.gif">
+        </section>
+
+
+
+
+        <section class="slide slide-gunter">
+          <h3><span style="color:darkorange;">CORS</span></h3>
+          Allows servers to specify who/what can access endpoint directly
+        </section>
+
+
+
+        <section class="slide slide-gunter">
+          Browsers restrict from which domains XMLHttp requests can be used.<br><br>
+        "same-origin policy."<br><br>
+
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy</a>
+        </section>
+
+
+        <section class="slide slide-gunter">
+          <h3><span style="color:darkorange;">How it works</span></h3>
+            <ul><li>
+            Pre flight check<br>
+            OPTIONS before POST<br>
+            </li>
+            <li>Browser passes Origin header to server:<br>
+            Origin: http://dom.co<br>
+            </li>
+            <li>Server responds (header) saying what is allowed:<br>
+            Access-Control-Allow-Origin: http://domain.com
+            </li>
+            </ul>
+        </section>
+
+
+        <section class="slide slide-gunter">
+          <h3>Work, CORS dammit</h3>
+          <br>
+            <code>header('Access-Control-Allow-Origin: *');
+            </code><br><br>
+            <i>Allows any script to pull data from your server...</i>
+        </section>
+
         <!-- gif -->
         <section data-background="http://awesomegifs.com/wp-content/uploads/the-dude-is-bored-thumb.gif">
           <h2>Dude! Show me the Drupal thing!</h2>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Gunter -->
+
+
+
+
+
+
+
+
+
+
+
+        <!-- gif -->
+        <section data-background="https://media.giphy.com/media/pjyUD8L0u7qhi/giphy.gif">
+          <h2>Let's kick some ass...</h2>
         </section>
 
 
