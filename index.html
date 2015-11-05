@@ -349,10 +349,10 @@
             OPTIONS before POST<br>
             </li>
             <li>Browser passes Origin header to server:<br>
-            Origin: http://dom.co<br>
+            <code>Origin: http://dom.co</code><br>
             </li>
             <li>Server responds (header) saying what is allowed:<br>
-            Access-Control-Allow-Origin: http://domain.com
+            <code>Access-Control-Allow-Origin: http://domain.com</code>
             </li>
             </ul>
         </section>
@@ -591,7 +591,87 @@
 
 
 
+
+
+
+
+
         <!-- FRE TROUBLES -->
+
+
+
+
+
+
+
+        <!-- OVERZICHT -->
+        <section data-background="http://i.giphy.com/sjBm1tn2EjKXm.gif">
+          <h4>Trouble in paradise</h4>
+          <ul>
+          <li>Redirects</li>
+          <li>Page not found</li>
+          <li>Sitemap</li>
+          <li>Opengraph</li>
+          </ul>
+        </section>
+
+
+        <!-- REDIRECTS -->
+
+        <section class="slide slide-gunter">
+          <h4>Redirects</h4>
+          <div style="text-align:left;">
+          <code><pre>.otherwise({<br>
+            &nbsp;resolve: {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;pageNotFoundAlias: pageNotFoundAliasResolver()<br>
+            &nbsp;},<br>
+            &nbsp;controller: 'Error404Controller',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;template: 'templatehtml',<br>
+            &nbsp;}<br>
+);<br>
+            </pre>
+          </code></div>
+
+        </section>
+
+        <section>
+          <h4>Redirects</h4>
+            You could also do this in your frontend php,<br>
+            to not load all redirects into your frontend.
+        </section>
+
+        <section>
+          <h4>Page not found</h4>
+            This is a drupal setting.<br>
+            So after checking redirects forward to this page.<br>
+            <img src="http://www.reactiongifs.com/r/durr.gif">
+        </section>
+
+        <section>
+          <h4>Sitemap</h4>
+            We generate the sitemap (php)<br>
+            It consumes the same api as our frontend.
+        </section>
+
+      <!-- FINISHED -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- FINISHED -->
+
+
+
+
 
 
 
