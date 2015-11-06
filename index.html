@@ -351,9 +351,6 @@ $(document).ready(function() {
           <div style="text-align:right;">Wikipedia</div>
         </section>
 
-        <section class="slide slide-gunter">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Flowchart_showing_Simple_and_Preflight_XHR.svg">
-        </section>
 
 
         <section class="slide slide-gunter">
@@ -385,11 +382,16 @@ $(document).ready(function() {
             </ul>
         </section>
 
+        <section class="slide slide-gunter">
+        <h3>Pre flight Check</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Flowchart_showing_Simple_and_Preflight_XHR.svg" style="background-color:white;">
+        </section>
+
 
         <section class="slide slide-gunter">
           <h3>Work, CORS dammit</h3>
           <br>
-            <code class="html">header('Access-Control-Allow-Origin: *');
+            <code class="php">header('Access-Control-Allow-Origin: *');
             </code><br><br>
             <i>Allows any script to pull data from your server...</i>
         </section>
@@ -544,6 +546,10 @@ $(document).ready(function() {
         <section class="slide slide-gunter">
           <h4>How angular routing works (A)</h4>
           <img class="screenshot" src="screenshots/ngview-old.jpg">
+          <code class="html">
+          <div class="main-content container"
+          </div>
+          </code>
         </section>
         <section class="slide slide-gunter">
           <h4>How angular routing works (B)</h4>
@@ -646,27 +652,66 @@ $(document).ready(function() {
 
         <!-- REDIRECTS -->
 
-        <section class="slide slide-gunter">
+
+
+
+        <section class="stack" >
+
+        <section class="slide slide-gunter" data-transition="linear">
           <h4>Redirects</h4>
           <div style="text-align:left;">
-          <code class="html"><pre>.otherwise({<br>
-            &nbsp;resolve: {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;pageNotFoundAlias: pageNotFoundAliasResolver()<br>
-            &nbsp;},<br>
-            &nbsp;controller: 'Error404Controller',<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;template: 'templatehtml',<br>
-            &nbsp;}<br>
-);<br>
+          <code class="javascript"><pre>.otherwise({
+            &nbsp;resolve: {
+            &nbsp;&nbsp;&nbsp;&nbsp;pageNotFoundAlias: pageNotFoundAliasResolver()
+            &nbsp;},
+            &nbsp;controller: 'Error404Controller',
+            &nbsp;&nbsp;&nbsp;&nbsp;template: 'templatehtml',
+            &nbsp;}
+);
             </pre>
           </code></div>
-
         </section>
 
+        <section class="slide slide-gunter" data-index-v="1" data-transition="linear">
+          <h4>Redirects</h4>
+          <div style="text-align:left;">
+          <code class="javascript"><pre>.otherwise({
+            &nbsp;resolve: {
+            &nbsp;&nbsp;&nbsp;&nbsp;<b>pageNotFoundAlias: pageNotFoundAliasResolver()</b>
+            &nbsp;},
+            &nbsp;controller: 'Error404Controller',
+            &nbsp;&nbsp;&nbsp;&nbsp;template: 'templatehtml',
+            &nbsp;}
+);
+            </pre>
+          </code></div>
+          <br>Fetches drupal redirects before controller is loaded
+        </section>
+        <section class="slide slide-gunter" data-transition="linear">
+          <h4>Redirects</h4>
+          <div style="text-align:left;">
+          <code class="javascript"><pre>.otherwise({
+            &nbsp;resolve: {
+            &nbsp;&nbsp;&nbsp;&nbsp;pageNotFoundAlias: pageNotFoundAliasResolver()
+            &nbsp;},
+            &nbsp;<b>controller: 'Error404Controller'</b>,
+            &nbsp;&nbsp;&nbsp;&nbsp;template: 'templatehtml',
+            &nbsp;}
+);
+            </pre>
+          </code></div>
+          In the controller <br><ul><li>check the redirects or </li><li>forward to Page not found</li></ul>
+        </section>
         <section>
           <h4>Redirects</h4>
             You could also do this in your frontend php,<br>
-            to not load all redirects into your frontend.
+            to not load all redirects into your frontend JS.
         </section>
+        </section>
+
+
+
+
 
         <section>
           <h4>Page not found</h4>
@@ -707,8 +752,14 @@ $(document).ready(function() {
 
         <section>
           <h4>prerender.io</h4>
-        “<i>You can not use this here</i>”<br><br>
-        <div style="text-align:right;">They</div>
+          <div style="    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;">
+            “<i>You can not use this here</i>”<br><br>
+            <div style="text-align:right;">They</div>
+          </div>
         <img src="http://www.reactiongifs.com/wp-content/uploads/2013/02/quick-sad.gif">
 <!--
         http://www.reactiongifs.com/wp-content/uploads/2013/02/quick-sad.gif
@@ -725,18 +776,30 @@ $(document).ready(function() {
         </section>
 
 
+
+
+
+
+
+
       <!-- FINISHED -->
 
 
 
 
 
+        <!-- questions -->
+        <!-- gif -->
+        <section data-background="http://www.scs.on.ca/wp-content/uploads/2015/09/questions.jpg">
+          <h2>Questions?</h2><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </section>
 
 
 
 
 
 
+        <!-- barcelona -->
         <!-- gif -->
         <section data-background="screenshots/lastpic.jpg">
           <h2>Thanks for listening!</h2><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
