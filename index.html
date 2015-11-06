@@ -31,10 +31,22 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+
+    <script type="text/javascript">
+$(document).ready(function() {
+  $('code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+    </script>
+
+
 	</head>
 
 	<body>
@@ -64,7 +76,7 @@
             <li class="fragment">How to create a <span>JSON feed</span> in Drupal 7</li> <!-- Gunter -->
             <li class="fragment">How to <span>setup a frontend</span> with angular-seed</li> <!-- Gunter -->
             <li class="fragment">How <span>page transitions</span> work</li> <!-- Gunter -->
-            <li class="fragment">Troubles in paradise!</li> <!-- Frederik -->
+            <li class="fragment">Troubles in frontend paradise!</li> <!-- Frederik -->
             <li class="fragment">Q&A</li>
           </ul>
         </section>
@@ -105,6 +117,12 @@
           <p>I want to learn something!</p>
         </section>
 
+          <!-- big picture 1 -->
+        <section data-background="http://blog.hdwallsource.com/wp-content/uploads/2014/10/earth-wallpaper-hd-23102-23752-hd-wallpapers.jpg">
+          <h2>The big picture</h2>
+          <!-- <p><img src="/screenshots/fre_drupal_1.png"></p> -->
+        </section>
+
 
         <!-- big picture 1 -->
         <section data-background="http://blog.hdwallsource.com/wp-content/uploads/2014/10/earth-wallpaper-hd-23102-23752-hd-wallpapers.jpg">
@@ -139,6 +157,14 @@
 
 
 
+        <section class="slide slide-gunter">
+          <h3>How is this achieved?</h3>
+          <ul>
+            <li  class="fragment">presenting your data in the <span style="color:darkorange;">JSON</span> format</li>
+            <li class="fragment">exposing it in a <span style="color:darkorange;">REST</span> interface</li>
+            <li class="fragment">while not breaking <span style="color:darkorange;">CORS</span></li>
+          </ul>
+        </section>
 
         <section class="slide slide-gunter">
           <h3>JSON</h3>
@@ -152,12 +178,11 @@
         <section class="slide slide-gunter">
           <h3>Example Object</h3>
             <div  style="text-align:left;">
-            <code>
-
+            <code  class="json" >
             {<br>
               &nbsp;&nbsp;&nbsp;”string": ”value”,<br>
               &nbsp;&nbsp;&nbsp;”boolean": true,<br>
-              &nbsp;&nbsp;&nbsp;”number": 123.45,<br>
+              &nbsp;&nbsp;&nbsp;”number": 123.45<br>
             }
 
             </code>
@@ -167,9 +192,8 @@
         <section class="slide slide-gunter">
           <h3>Example Array</h3>
             <div  style="text-align:left;">
-            <code>
-           [0,1,2] <br>or<br> [{"name": "Fre"}, {"name": "Gunter"}]
-            </pre>
+            <code class="json">
+           [0,1,2] </code><br>or<br> <code class="json">[{"name": "Fre"}, {"name": "Gunter"}]
             </code>
             </div>
         </section>
@@ -178,7 +202,7 @@
         <section class="slide slide-gunter">
           <h3>Example Combination</h3>
             <div  style="text-align:left;">
-            <code>
+            <code class="html">
 {<br>
 &nbsp;&nbsp;"users": [<br>
 &nbsp;&nbsp;&nbsp;&nbsp;{<br>
@@ -233,21 +257,16 @@
         </section>
 
         <section class="slide slide-gunter">
-
-          Any information that can be named is a Resource
+        <h3>Resource</h3>
+        <ul>
+        <li class="fragment">Any information that can be named is a Resource</li>
+        <li class="fragment">A resource can also be a collection of entities</li>
+        </ul>
         </section>
 
-        <section class="slide slide-gunter">
-
-          A resource can also be a collection of entities
-          <br>
-          <br>
-          http://dom.co/api/cities
-        </section>
 
         <section class="slide slide-gunter">
-
-          Every resource has a unique identifier (URI)<br>
+          <h3>Every resource has a unique identifier (URI)</h3>
           <br>
           http://dom.co/api/cities<br>
           http://dom.co/api/cities/unique_id<br>
@@ -270,8 +289,8 @@
 
         <section class="slide slide-gunter">
           When to return text/html/JSON/yaml? <br><br>Content negotiation (HTTP: Accept header)<br><br>
-          GET http://dom.co/cities<br>
-          Accept: application/json, text/xml<br>
+          <code>GET http://dom.co/cities</code><br>
+          <code>Accept: application/json, text/xml</code><br>
         </section>
 
 
@@ -326,6 +345,16 @@
 
 
 
+        <section class="slide slide-gunter">
+          <h3><span style="color:darkorange;">CORS</span></h3>
+          "<i>Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources (e.g. fonts) on a web page to be requested from another domain outside the domain from which the resource originated</i>"
+          <div style="text-align:right;">Wikipedia</div>
+        </section>
+
+        <section class="slide slide-gunter">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Flowchart_showing_Simple_and_Preflight_XHR.svg">
+        </section>
+
 
         <section class="slide slide-gunter">
           <h3><span style="color:darkorange;">CORS</span></h3>
@@ -337,7 +366,6 @@
         <section class="slide slide-gunter">
           Browsers restrict from which domains XMLHttp requests can be used.<br><br>
         "same-origin policy."<br><br>
-
         <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy</a>
         </section>
 
@@ -349,10 +377,10 @@
             OPTIONS before POST<br>
             </li>
             <li>Browser passes Origin header to server:<br>
-            <code>Origin: http://dom.co</code><br>
+            <code class="html">Origin: http://dom.co</code><br>
             </li>
             <li>Server responds (header) saying what is allowed:<br>
-            <code>Access-Control-Allow-Origin: http://domain.com</code>
+            <code class="html">Access-Control-Allow-Origin: http://domain.com</code>
             </li>
             </ul>
         </section>
@@ -361,7 +389,7 @@
         <section class="slide slide-gunter">
           <h3>Work, CORS dammit</h3>
           <br>
-            <code>header('Access-Control-Allow-Origin: *');
+            <code class="html">header('Access-Control-Allow-Origin: *');
             </code><br><br>
             <i>Allows any script to pull data from your server...</i>
         </section>
@@ -606,7 +634,7 @@
 
         <!-- OVERZICHT -->
         <section data-background="http://i.giphy.com/sjBm1tn2EjKXm.gif">
-          <h4>Trouble in paradise</h4>
+          <h4>Troubles in frontend paradise</h4>
           <ul>
           <li>Redirects</li>
           <li>Page not found</li>
@@ -621,7 +649,7 @@
         <section class="slide slide-gunter">
           <h4>Redirects</h4>
           <div style="text-align:left;">
-          <code><pre>.otherwise({<br>
+          <code class="html"><pre>.otherwise({<br>
             &nbsp;resolve: {<br>
             &nbsp;&nbsp;&nbsp;&nbsp;pageNotFoundAlias: pageNotFoundAliasResolver()<br>
             &nbsp;},<br>
