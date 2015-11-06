@@ -169,7 +169,8 @@ $(document).ready(function() {
         <section class="slide slide-gunter">
           <h3>JSON</h3>
           <!-- <img class="screenshot" src="screenshots/jason.jpg"> -->
-          <span style="color:darkorange;">J</span>ava<span style="color:darkorange;">S</span>cript <span style="color:darkorange;">O</span>bject <span style="color:darkorange;">N</span>otation is a lightweight format that is used for data interchanging. It is based on a subset of JavaScript language (the way objects are built in JavaScript). As stated in the MDN, some JavaScript is not JSON, and some JSON is not JavaScript
+          "<i><span style="color:darkorange;">J</span>ava<span style="color:darkorange;">S</span>cript <span style="color:darkorange;">O</span>bject <span style="color:darkorange;">N</span>otation is a lightweight format that is used for data interchanging. It is based on a subset of JavaScript language (the way objects are built in JavaScript). As stated in the MDN, some JavaScript is not JSON, and some JSON is not JavaScript</i>"
+          <div style="text-align:right">Wikipedia</div>
         </section>
 
         <section data-background="http://www.reactiongifs.com/r/panic.gif">
@@ -340,6 +341,7 @@ $(document).ready(function() {
 
         <section class="slide slide-gunter">
           <h3><span style="color:darkorange;">CORS</span></h3>
+          <img src="http://www.codeguru.com/imagesvr_ce/2530/CORSFigure03.png">
           <img class="screenshot" src="http://www.reactiongifs.com/r/dsori.gif"><br>
         </section>
 
@@ -382,18 +384,26 @@ $(document).ready(function() {
             </ul>
         </section>
 
+
         <section class="slide slide-gunter">
         <h3>Pre flight Check</h3>
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Flowchart_showing_Simple_and_Preflight_XHR.svg" style="background-color:white;">
         </section>
 
-
+        <section class="stack">
         <section class="slide slide-gunter">
           <h3>Work, CORS dammit</h3>
           <br>
             <code class="php">header('Access-Control-Allow-Origin: *');
             </code><br><br>
             <i>Allows any script to pull data from your server...</i>
+        </section>
+        <section class="slide slide-gunter">
+          <h3>Better</h3>
+          <br>
+            <code class="php">header('Access-Control-Allow-Origin: http://dom.co');
+            </code>
+        </section>
         </section>
 
         <!-- gif -->
@@ -646,7 +656,8 @@ $(document).ready(function() {
           <li>Page not found</li>
           <li>Sitemap</li>
           <li>Opengraph</li>
-          <li>Webforms (and more)</li>
+          <li>Webforms</li>
+          <li>...</li>
           </ul>
         </section>
 
@@ -787,15 +798,19 @@ $(document).ready(function() {
           Just doesn't work.<br><br>
           <ol>
             <li class="fragment">Iframe</li>
-            <li class = "fragment">Proper fix</li>
+            <li class="fragment">Proper fix</li>
           </ol>
+
           </section>
+
 
           <section>
             <h4>Iframe</h4>
             <img src="http://i.giphy.com/TwtXMS5EnKDBK.gif">
             <br>Everithing works<br>
           </section>
+
+
 
           <section>
             <h4>Proper</h4>
@@ -808,23 +823,17 @@ $(document).ready(function() {
           </section>
 
           <section>
-            <h4>WANT</h4>
-            Someone please create a angular component that talks "drupal:webform".
+            <h4>But hey</h4>
+              Custom coding!<br>
+              <img src="http://i.giphy.com/aQYR1p8saOQla.gif">
           </section>
-        </section>
-
-
-
 
           <section>
-            <h4>Did we forget stuff</h4>
-            DUH
+            <h4>WANT</h4>
+            Someone please create a angular component that talks "drupal:webform".<br><br>
+            <img src="http://i.giphy.com/sXv0vaA4331Ti.gif">
           </section>
-
-
-
-
-
+        </section>
 
 
       <!-- FINISHED -->
